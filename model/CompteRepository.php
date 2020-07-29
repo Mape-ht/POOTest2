@@ -1,7 +1,7 @@
 <?php
 
-include 'DBacces.class.php';
-include 'C:\xampp\htdocs\mesprojets\php\banquePOO2\entities\Compte.class.php';
+require_once 'DBacces.class.php';
+require_once 'C:\xampp\htdocs\mesprojets\php\banquePOO2\entities\Compte.class.php';
 
 $compte = new Compte();
 

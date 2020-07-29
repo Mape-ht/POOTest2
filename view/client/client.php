@@ -28,7 +28,7 @@
         </aside>
         <!--client physique séparé de client moral-->
         <section class="Client">
-            <form method="POST" action="../../controller/ClientMoral.controller.php">
+            <form method="POST" action="../../controller/Client.controller.php">
                 <div>
                     <label for="cltp">Type Client</label>
                     <select name="cltp" id="cltp" onchange="showForm()">
