@@ -7,12 +7,12 @@ $clientMoral = new ClientMoral();
 
 function addClientMo($clientMoral){
 
-    $sql = "INSERT INTO `client_moral`(id, raison_social, nom, adresse, ninea, telephone, email, `login`, `password`) VALUES ('null',?,?,?,?,'null','null','null','null')";
+    $sql = "INSERT INTO `client_moral`(id, raison_social, nom, adresse, ninea, telephone, email, `login`, `password`) VALUES (null,?,?,?,?,'null','null','null','null')";
 
     $access = new DBacces();
     $prepare=$access->mAJ($sql);
 
-    if($prepare->execute(array($clientMoral->getRaisonSo,$clientMoral->getNomsEmployeur, $clientMoral->getAdresseEmploi, $clientMoral->getNumIdEmployeur))){
+    if($prepare->execute(array($clientMoral->getRaisonSo(),$clientMoral->getNom(), $clientMoral->getAdresse(), $clientMoral->getNinea()))){
 
             return true;
         }else{

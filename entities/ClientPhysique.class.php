@@ -3,14 +3,14 @@
 class ClientPhysique{
 
     private $id;
-    private $nomsClt;
-    private $prenoms;
+    private $nom;
+    private $prenom;
     private $adresse;
     private $email;
-    private $phone;
+    private $telephone;
     private $salaire;
-    private $employeur;
-    private $numIdTravail;
+    private $statut;
+    private $cin;
     private $login;
     private $password;
     private $typeclt;
@@ -166,9 +166,9 @@ class ClientPhysique{
     /**
      * Get the value of employeur
      */ 
-    public function getEmployeur()
+    public function getStatut()
     {
-        return $this->employeur;
+        return $this->statut;
     }
 
     /**
@@ -176,9 +176,9 @@ class ClientPhysique{
      *
      * 
      */ 
-    public function setEmployeur($employeur)
+    public function setStatut($statut)
     {
-        $this->employeur = $employeur;
+        $this->statut = $statut;
 
         
     }

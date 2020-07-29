@@ -28,7 +28,7 @@
         </aside>
         <!--client physique séparé de client moral-->
         <section class="Client">
-            <form method="POST" action="../controller/client/FichierClientController.php">
+            <form method="POST" action="../../controller/ClientMoral.controller.php">
                 <div>
                     <label for="cltp">Type Client</label>
                     <select name="cltp" id="cltp" onchange="showForm()">
@@ -82,7 +82,7 @@
                             <select name="employeur" id="Employeur" onchange="showEmployeur()">
                                 <option value="0">-----Employeur----</option>
                                 <?php
-                                
+
                                 include "../../model/ClientMoralRepository.php";
                                 $listClientMo = listClientMoral();
                                 if ($listClientMo != null) {
@@ -99,10 +99,11 @@
                             <label for="numIdTravail">CIN</label>
                             <input type="text" id="numIdTravail" name="numIdTravail" placeholder="Numero ident Travailleur" /><br><br />
                     </fieldset><br></br>
-                    <div>
-                        <input type="submit" value="valider" />
-                        <button type="reset" class="bouttonA">ANNULER</button>
-                    </div>
+                </div>
+                <div id="addbutton" hidden>
+                    <input type="submit" value="valider" />
+                    <button type="reset" class="bouttonA">ANNULER</button>
+                </div>
             </form>
         </section>
     </main>

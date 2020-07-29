@@ -2,13 +2,13 @@
 class Compte{
 
     private $id;
-    private $numCompte;
-    private $cle;
+    private $numerocte;
+    private $clerib;
     private $agence;
-    private $initial;
-    private $clientphysique;
-    private $clientmoral; 
-    private $dateOuv;
+    private $depotinitial;
+    private $cltphy;
+    private $cltmoral; 
+    private $datecrea;
     private $typecompte;
     private $typefrais;
     
@@ -20,85 +20,7 @@ class Compte{
 
     
 
-    /**
-     * Get the value of numCompte
-     */ 
-    public function getNumCompte()
-    {
-        return $this->numCompte;
-    }
-
-    /**
-     * Set the value of numCompte
-     *
-     * 
-     */ 
-    public function setNumCompte($numCompte)
-    {
-        $this->numCompte = $numCompte;
-
-        
-    }
-
-    /**
-     * Get the value of cle
-     */ 
-    public function getCle()
-    {
-        return $this->cle;
-    }
-
-    /**
-     * Set the value of cle
-     *
-     * 
-     */ 
-    public function setCle($cle)
-    {
-        $this->cle = $cle;
-
-        
-    }
-
-    /**
-     * Get the value of initial
-     */ 
-    public function getInitial()
-    {
-        return $this->initial;
-    }
-
-    /**
-     * Set the value of initial
-     *
-     * 
-     */ 
-    public function setInitial($initial)
-    {
-        $this->initial = $initial;
-
-        
-    }
-
-    /**
-     * Get the value of dateOuv
-     */ 
-    public function getDateOuv()
-    {
-        return $this->dateOuv;
-    }
-
-    /**
-     * Set the value of dateOuv
-     *
-     * 
-     */ 
-    public function setDateOuv($dateOuv)
-    {
-        $this->dateOuv = $dateOuv;
-
-        
-    }
+    
 
     /**
      * Get the value of id
@@ -121,41 +43,41 @@ class Compte{
     }
 
     /**
-     * Get the value of numCompte
+     * Get the value of numerocte
      */ 
-    public function getNumCompte()
+    public function getNumerocte()
     {
-        return $this->numCompte;
+        return $this->numerocte;
     }
 
     /**
-     * Set the value of numCompte
+     * Set the value of numerocte
      *
      * 
      */ 
-    public function setNumCompte($numCompte)
+    public function setNumerocte($numerocte)
     {
-        $this->numCompte = $numCompte;
+        $this->numerocte = $numerocte;
 
         
     }
 
     /**
-     * Get the value of cle
+     * Get the value of clerib
      */ 
-    public function getCle()
+    public function getClerib()
     {
-        return $this->cle;
+        return $this->clerib;
     }
 
     /**
-     * Set the value of cle
+     * Set the value of clerib
      *
      * 
      */ 
-    public function setCle($cle)
+    public function setClerib($clerib)
     {
-        $this->cle = $cle;
+        $this->clerib = $clerib;
 
         
     }
@@ -181,81 +103,81 @@ class Compte{
     }
 
     /**
-     * Get the value of initial
+     * Get the value of depotinitial
      */ 
-    public function getInitial()
+    public function getDepotinitial()
     {
-        return $this->initial;
+        return $this->depotinitial;
     }
 
     /**
-     * Set the value of initial
+     * Set the value of depotinitial
      *
      * 
      */ 
-    public function setInitial($initial)
+    public function setDepotinitial($depotinitial)
     {
-        $this->initial = $initial;
+        $this->depotinitial = $depotinitial;
 
         
     }
 
     /**
-     * Get the value of clientphysique
+     * Get the value of cltphy
      */ 
-    public function getClientphysique()
+    public function getCltphy()
     {
-        return $this->clientphysique;
+        return $this->cltphy;
     }
 
     /**
-     * Set the value of clientphysique
+     * Set the value of cltphy
      *
      * 
      */ 
-    public function setClientphysique($clientphysique)
+    public function setCltphy($cltphy)
     {
-        $this->clientphysique = $clientphysique;
+        $this->cltphy = $cltphy;
 
         
     }
 
     /**
-     * Get the value of clientmoral
+     * Get the value of cltmoral
      */ 
-    public function getClientmoral()
+    public function getCltmoral()
     {
-        return $this->clientmoral;
+        return $this->cltmoral;
     }
 
     /**
-     * Set the value of clientmoral
+     * Set the value of cltmoral
      *
      * 
      */ 
-    public function setClientmoral($clientmoral)
+    public function setCltmoral($cltmoral)
     {
-        $this->clientmoral = $clientmoral;
+        $this->cltmoral = $cltmoral;
 
         
     }
 
     /**
-     * Get the value of dateOuv
+     * Get the value of datecrea
      */ 
-    public function getDateOuv()
+    public function getDatecrea()
     {
-        return $this->dateOuv;
+        return $this->datecrea;
     }
 
     /**
-     * Set the value of dateOuv
+     * Set the value of datecrea
      *
      * 
      */ 
-    public function setDateOuv($dateOuv)
+    public function setDatecrea($datecrea)
     {
-        $this->dateOuv = $dateOuv;
+        $this->datecrea = $datecrea;
 
         
     }

@@ -5,9 +5,9 @@ class ClientMoral{
 
     private $id;
     private $raisonSo;
-    private $nomsEmployeur;
-    private $adresseEmploi;
-    private $numIdEmployeur;
+    private $nom;
+    private $adresse;
+    private $ninea;
     private $telephone;
     private $email;
     private $login;
@@ -19,6 +19,8 @@ class ClientMoral{
         
     }
 
+
+    
 
     
 
@@ -63,61 +65,61 @@ class ClientMoral{
     }
 
     /**
-     * Get the value of nomsEmployeur
+     * Get the value of nom
      */ 
-    public function getNomsEmployeur()
+    public function getNom()
     {
-        return $this->nomsEmployeur;
+        return $this->nom;
     }
 
     /**
-     * Set the value of nomsEmployeur
+     * Set the value of nom
      *
      * 
      */ 
-    public function setNomsEmployeur($nomsEmployeur)
+    public function setNom($nom)
     {
-        $this->nomsEmployeur = $nomsEmployeur;
+        $this->nom = $nom;
 
         
     }
 
     /**
-     * Get the value of adresseEmploi
+     * Get the value of adresse
      */ 
-    public function getAdresseEmploi()
+    public function getAdresse()
     {
-        return $this->adresseEmploi;
+        return $this->adresse;
     }
 
     /**
-     * Set the value of adresseEmploi
+     * Set the value of adresse
      *
      * 
      */ 
-    public function setAdresseEmploi($adresseEmploi)
+    public function setAdresse($adresse)
     {
-        $this->adresseEmploi = $adresseEmploi;
+        $this->adresse = $adresse;
 
         
     }
 
     /**
-     * Get the value of numIdEmployeur
+     * Get the value of ninea
      */ 
-    public function getNumIdEmployeur()
+    public function getNinea()
     {
-        return $this->numIdEmployeur;
+        return $this->ninea;
     }
 
     /**
-     * Set the value of numIdEmployeur
+     * Set the value of ninea
      *
      * 
      */ 
-    public function setNumIdEmployeur($numIdEmployeur)
+    public function setNinea($ninea)
     {
-        $this->numIdEmployeur = $numIdEmployeur;
+        $this->ninea = $ninea;
 
         
     }

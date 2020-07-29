@@ -2,7 +2,7 @@
 class FraisBancaire{
 
     private $id;
-    private $typesfrais;
+    private $typefrais;
     private $datefrais;
     private $compteclient;
 
@@ -11,6 +11,8 @@ class FraisBancaire{
         
     }
 
+
+    
 
     
 
@@ -35,21 +37,21 @@ class FraisBancaire{
     }
 
     /**
-     * Get the value of typesfrais
+     * Get the value of typefrais
      */ 
-    public function getTypesfrais()
+    public function getTypefrais()
     {
-        return $this->typesfrais;
+        return $this->typefrais;
     }
 
     /**
-     * Set the value of typesfrais
+     * Set the value of typefrais
      *
      * 
      */ 
-    public function setTypesfrais($typesfrais)
+    public function setTypefrais($typefrais)
     {
-        $this->typesfrais = $typesfrais;
+        $this->typefrais = $typefrais;
 
         
     }

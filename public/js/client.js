@@ -6,15 +6,18 @@ function showForm(){
     if(type==="Client Entreprise"){
         document.getElementById("cltMoralForm").hidden = false;
         document.getElementById("cltPhysiqueForm").hidden = true;
+        document.getElementById("addbutton").hidden = false;
 
     }else{
         if(type==="Client Particulier"){
             document.getElementById("cltMoralForm").hidden = true;
             document.getElementById("cltPhysiqueForm").hidden = false;
+            document.getElementById("addbutton").hidden = false;
         }
         else{
             document.getElementById("cltMoralForm").hidden = true;
             document.getElementById("cltPhysiqueForm").hidden = true;
+            document.getElementById("addbutton").hidden = true;
         }
     }   
 }
