@@ -4,8 +4,10 @@ include "../model/ClientMoralRepository.php"; //appeller le fichier modeltraitem
 include "../model/ClientPhysiqueRepository.php"; //appeller le fichier modeltraitement de sql
 
 extract($_POST);
+
 if($cltp=="1"){
-//var_dump($_POST);
+    
+    //var_dump($_POST);
 //die;
     if(isset($_POST)&& empty($_POST)==false){//voir si $ post existe et si champs pas vide
         
@@ -31,9 +33,10 @@ if($cltp=="1"){
                 echo "Erreur !..."; //sinon message erreur
             }
 }else{
-    
+    //extract($_POST);
     if($cltp=="2")
-    
+    //var_dump($_POST);//verifier si l'insertion au niveau du formulaire passe
+    //die;
     { 
         
         if(isset($_POST)&& empty($_POST)==false){//voir si $ post existe et si champs pas vide
