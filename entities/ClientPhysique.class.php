@@ -48,7 +48,7 @@ class ClientPhysique{
      */ 
     public function getNomsClt()
     {
-        return $this->nomsClt;
+        return $this->nom;
     }
 
     /**
@@ -58,7 +58,7 @@ class ClientPhysique{
      */ 
     public function setNomsClt($nomsClt)
     {
-        $this->nomsClt = $nomsClt;
+        $this->nom = $nomsClt;
 
         
     }
@@ -68,7 +68,7 @@ class ClientPhysique{
      */ 
     public function getPrenoms()
     {
-        return $this->prenoms;
+        return $this->prenom;
     }
 
     /**
@@ -78,7 +78,7 @@ class ClientPhysique{
      */ 
     public function setPrenoms($prenoms)
     {
-        $this->prenoms = $prenoms;
+        $this->prenom = $prenoms;
 
         
     }
@@ -128,7 +128,7 @@ class ClientPhysique{
      */ 
     public function getPhone()
     {
-        return $this->phone;
+        return $this->telephone;
     }
 
     /**
@@ -138,7 +138,7 @@ class ClientPhysique{
      */ 
     public function setPhone($phone)
     {
-        $this->phone = $phone;
+        $this->telephone = $phone;
 
         
     }
@@ -179,26 +179,6 @@ class ClientPhysique{
     public function setStatut($statut)
     {
         $this->statut = $statut;
-
-        
-    }
-
-    /**
-     * Get the value of numIdTravail
-     */ 
-    public function getNumIdTravail()
-    {
-        return $this->numIdTravail;
-    }
-
-    /**
-     * Set the value of numIdTravail
-     *
-     * 
-     */ 
-    public function setNumIdTravail($numIdTravail)
-    {
-        $this->numIdTravail = $numIdTravail;
 
         
     }
@@ -281,6 +261,22 @@ class ClientPhysique{
         $this->cltmoral = $cltmoral;
 
         
+    }
+
+    /**
+     * Get the value of cin
+     */ 
+    public function getCin()
+    {
+        return $this->cin;
+    }
+
+    /**
+     * Set the value of cin
+     */ 
+    public function setCin($cin)
+    {
+        $this->cin = $cin;
     }
 }
 

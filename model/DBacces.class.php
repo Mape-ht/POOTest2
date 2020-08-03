@@ -3,11 +3,11 @@
 class DBacces{
 
 
-function __construct()
+public function __construct()
 {   
 }
 
-function getConnect(){
+protected function getConnect(){
 
     $host = "localhost";
     $user = "root";
@@ -29,7 +29,7 @@ function getConnect(){
 function mAJ($requet){
 
     $db = $this->getConnect();
-    return $db->prepare ($requet);
+    return $db->prepare($requet);
 
 }
 
@@ -37,11 +37,9 @@ function mAJ($requet){
 function selection($requet){
 
 
-$db = $this->getConnect();
-return $db->query($requet);
+    $db = $this->getConnect();
+    return $db->query($requet);
 
 }
 
 }
-
-?>

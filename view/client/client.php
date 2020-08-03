@@ -28,7 +28,7 @@
         </aside>
         <!--client physique séparé de client moral-->
         <section class="Client">
-            <form method="POST" action="../../controller/Client.controller.php">
+            <form method="POST" action="../../controller/ClientController.php">
                 <div>
                     <label for="cltp">Type Client</label>
                     <select name="cltp" id="cltp" onchange="showForm()">
@@ -101,7 +101,7 @@
                     </fieldset><br></br>
                 </div>
                 <div id="addbutton" hidden>
-                    <input type="submit" value="valider" />
+                    <input type="submit" value="valider" name="ajouter" />
                     <button type="reset" class="bouttonA">ANNULER</button>
                 </div>
             </form>
