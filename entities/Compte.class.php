@@ -4,14 +4,13 @@ class Compte{
     private $id;
     private $numerocte;
     private $clerib;
-    private $agence;
+    private $agence_id;
     private $depotinitial;
-    private $cltphy;
-    private $cltmoral; 
+    private $cltphy_id;
+    private $cltmoral_id;
     private $datecrea;
-    private $typecompte;
-    private $typefrais;
-    
+    private $typecompte_id;
+    private $typefrais_id;
 
     function __construct()
     {
@@ -20,7 +19,6 @@ class Compte{
 
     
 
-    
 
     /**
      * Get the value of id
@@ -83,21 +81,21 @@ class Compte{
     }
 
     /**
-     * Get the value of agence
+     * Get the value of agence_id
      */ 
-    public function getAgence()
+    public function getAgence_id()
     {
-        return $this->agence;
+        return $this->agence_id;
     }
 
     /**
-     * Set the value of agence
+     * Set the value of agence_id
      *
      * 
      */ 
-    public function setAgence($agence)
+    public function setAgence_id($agence_id)
     {
-        $this->agence = $agence;
+        $this->agence_id = $agence_id;
 
         
     }
@@ -123,41 +121,21 @@ class Compte{
     }
 
     /**
-     * Get the value of cltphy
+     * Get the value of cltmoral_id
      */ 
-    public function getCltphy()
+    public function getCltmoral_id()
     {
-        return $this->cltphy;
+        return $this->cltmoral_id;
     }
 
     /**
-     * Set the value of cltphy
+     * Set the value of cltmoral_id
      *
      * 
      */ 
-    public function setCltphy($cltphy)
+    public function setCltmoral_id($cltmoral_id)
     {
-        $this->cltphy = $cltphy;
-
-        
-    }
-
-    /**
-     * Get the value of cltmoral
-     */ 
-    public function getCltmoral()
-    {
-        return $this->cltmoral;
-    }
-
-    /**
-     * Set the value of cltmoral
-     *
-     * 
-     */ 
-    public function setCltmoral($cltmoral)
-    {
-        $this->cltmoral = $cltmoral;
+        $this->cltmoral_id = $cltmoral_id;
 
         
     }
@@ -183,45 +161,45 @@ class Compte{
     }
 
     /**
-     * Get the value of typecompte
+     * Get the value of typecompte_id
      */ 
-    public function getTypecompte()
+    public function getTypecompte_id()
     {
-        return $this->typecompte;
+        return $this->typecompte_id;
     }
 
     /**
-     * Set the value of typecompte
+     * Set the value of typecompte_id
      *
      * 
      */ 
-    public function setTypecompte($typecompte)
+    public function setTypecompte_id($typecompte_id)
     {
-        $this->typecompte = $typecompte;
+        $this->typecompte_id = $typecompte_id;
 
         
     }
 
     /**
-     * Get the value of typefrais
+     * Get the value of typefrais_id
      */ 
-    public function getTypefrais()
+    public function getTypefrais_id()
     {
-        return $this->typefrais;
+        return $this->typefrais_id;
     }
 
     /**
-     * Set the value of typefrais
+     * Set the value of typefrais_id
      *
      * 
      */ 
-    public function setTypefrais($typefrais)
+    public function setTypefrais_id($typefrais_id)
     {
-        $this->typefrais = $typefrais;
+        $this->typefrais_id = $typefrais_id;
 
         
     }
-}
+}  
 
-
+    
 ?>

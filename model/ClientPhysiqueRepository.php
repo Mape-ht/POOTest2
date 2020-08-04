@@ -33,11 +33,4 @@ class ClientPhysiqueRepository extends DBacces
 
 }
 
-
-
-
-
-
-
-
 ?>

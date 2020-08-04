@@ -1,19 +1,21 @@
 <?php
 
 require_once 'DBacces.class.php';
-require_once 'C:\xampp\htdocs\mesprojets\php\banquePOO2\entities\ClientMoral.class.php';
+//require_once 'C:\xampp\htdocs\mesprojets\php\banquePOO2\entities\ClientMoral.class.php';
+require require_once './../entities/ClientMoral.class.php';
 
-$clientMoral = new ClientMoral();
+class ClientMoralRepository extends DBacces
+{
 
-function addClientMo($clientMoral){
+    public function addClientMo($clientMoral){
 
-    $sql = "INSERT INTO `client_moral`(id, raison_social, nom, adresse, ninea, telephone, email, `login`, `password`) VALUES (null,?,?,?,?,'null','null','null','null')";
+        $sql = "INSERT INTO `client_moral`(id, raison_social, nom, adresse, ninea, telephone, email, `login`, `password`) VALUES (null,?,?,?,?,'null','null','null','null')";
 //var_dump($sql);
 //die;
-    $access = new DBacces();
-    $prepare=$access->mAJ($sql);
+    //$access = new DBacces();
+    $access=$this->mAJ($sql);//instance de PDOStatement
 
-    if($prepare->execute(array($clientMoral->getRaisonSo(),$clientMoral->getNom(), $clientMoral->getAdresse(), $clientMoral->getNinea()))){
+    if($access->execute(array($clientMoral->getRaisonSo(),$clientMoral->getNom(), $clientMoral->getAdresse(), $clientMoral->getNinea()))){
 
             return true;
         }else{
@@ -21,15 +23,18 @@ function addClientMo($clientMoral){
             return false;
     }
 
+
+    }
+
+    public function listClientMoral(){
+
+
+        $sql = "SELECT * FROM `client_moral`"; 
+        $access = new DBacces();
+        return $access->selection($sql);     
+    
+    }
+
 }
 
-
-function listClientMoral(){
-
-
-    $sql = "SELECT * FROM `client_moral`"; 
-    $access = new DBacces();
-    return $access->selection($sql);     
-
-}
 ?>

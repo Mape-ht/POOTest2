@@ -27,7 +27,7 @@
             </ul>
         </aside>
         <section class="Compte">
-            <form id="creacompteForm" method="POST" action="../../controller/Compte.controller.php" onchange="showCompteEpargne()">
+            <form id="creacompteForm" method="POST" action="../../controller/CompteController.php" onchange="showCompteEpargne()">
          
                 <fieldset>
                     <legend>Creation Compte</legend>
