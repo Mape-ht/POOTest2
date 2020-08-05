@@ -53,7 +53,8 @@ class ClientController
             $clientM->setAdresse($_POST["adresseEmploi"]);
             $clientM->setNinea($_POST["numIdEmployeur"]);
     
-            $ok = addClientMo($clientM); //si l'attribution de valeur à l'objet se passe bien alors ppeler la foction d'insertion dans la base de données 
+            $clientMoRep = new ClientMoralRepository();
+            $ok = $clientMoRep->addClientMo($clientM); //si l'attribution de valeur à l'objet se passe bien alors ppeler la foction d'insertion dans la base de données 
     
             if ($ok) {
     

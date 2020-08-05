@@ -199,6 +199,26 @@ class Compte{
 
         
     }
+
+    /**
+     * Get the value of cltphy_id
+     */ 
+    public function getCltphy_id()
+    {
+        return $this->cltphy_id;
+    }
+
+    /**
+     * Set the value of cltphy_id
+     *
+     * 
+     */ 
+    public function setCltphy_id($cltphy_id)
+    {
+        $this->cltphy_id = $cltphy_id;
+
+        
+    }
 }  
 
     

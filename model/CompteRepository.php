@@ -1,40 +1,43 @@
 <?php
 
 require_once 'DBacces.class.php';
-//require_once 'C:\xampp\htdocs\mesprojets\php\banquePOO2\entities\Compte.class.php';
-require_once './../entities/Compte.class.php';
+require_once 'C:\xampp\htdocs\mesprojets\php\banquePOO2\entities\Compte.class.php';
+
+//$compte = new Compte();
 
 class CompteRepository extends DBacces{
 
 
     function addCompte($compte){
 
-       $sql = "INSERT INTO `compte_client`(`id`, `numerocte`, `clerib`, `agence_id`, `depotinitial`, `cltphy_id`, `cltmoral_id`, `datecrea`, `typecompte_id`, `typefrais_id`) VALUES (null,?,?,'null',?,'null','null',?,?,?)";
-        //$sql = "INSERT INTO `compte`(`id`, `numCompte`, `clerib`, `depotInit`, `fraisOuverture`, `remun`, `agio`, `dateOuv`) VALUES (null,?,?,?,?,?,?,?)";
-
-    //var_dump($sql);
-    //die;
+        $sql = "INSERT INTO `compte_client`(`id`, `numerocte`, `clerib`, `agence_id`, `depotinitial`, `cltphy_id`, `cltmoral_id`, `datecrea`, `typecompte_id`, `typefrais_id`) VALUES (null,?,?,null,?,null,null,?,?,?)";
+    
         $access = new DBacces();
-        $access=$this->mAJ($sql);
+        $prepare=$access->mAJ($sql);
     
-        if($access->execute(array($compte->getNumerocte(),$compte->getClerib(), $compte->getDepotinitial(), $compte->getTypefrais_id(), $compte->getTypecompte_id(), $compte->getDatecrea()))){
-    
+        if($prepare->execute(array($compte->getNumerocte(),$compte->getClerib(), $compte->getDepotinitial(), $compte->getDatecrea(), $compte->getTypecompte_id(), $compte->getTypefrais_id()))){
+            //var_dump($sql);
+            //die;
                 return true;
             }else{
     
                 return false;
         }
+    
+    }
 
+
+    public function listCompte(){
+
+        $sql = "SELECT * FROM `compte_client`";
+        $access = new DBacces;
+        return $access->selection($sql);
+    }
 
 }
 
-public function listCompte(){
-
-    $sql = "SELECT * FROM `compte_client`";
-    $access = new DBacces;
-    return $access->selection($sql);
-}
-
-}
 
 ?>
+
+
+

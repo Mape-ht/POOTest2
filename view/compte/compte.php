@@ -21,7 +21,7 @@
         <aside>
             <ul class="main-nav">
                 <li><a href="../../index.php">Accueil</a></li>
-                <li><a href="../../view/client.php">Creation Client</a></li>
+                <li><a href="./../client/client.php">Creation Client</a></li>
                 <li><a href="compte.php">Creation Compte</a></li>
                 <li><a href="#">Transaction</a></li>
             </ul>
@@ -38,7 +38,7 @@
                             <option value="1">Epargne et Xewel</option>
                             <option value="2">Courant</option>
                             <option value="3">Bloque</option>
-                        </select><br><br />
+                        </select><br><br/>
                     </div>
                     <div>
                         <label for="numCompte">Numéro de Compte</label>
@@ -52,19 +52,27 @@
                     </div>
                     
                     <label for="typesfrais">Frais Ouverture</label>
-                    
-                    <input type="text" name="typesfrais" id="typesfrais" /><br></br>
+                    <select name="typesfrais" id="typesfrais">
+                            <option value="0">----Type frais----</option>
+                            <option value="1">Frais ouverture</option>
+                            <option value="2">Agio</option>
+                            <option value="3">Frais Blocage</option>
+                        </select><br><br />
+                    <!--<input type="text" name="typesfrais" id="typesfrais" /><br></br>
                     
                     <label for="remun">Remuneration</label>
                     <input type="text" name="remun" id="remun" /><br></br>
                     
                     <label for="agios">Agios</label>
-                    <input type="text" name="agios" id="agios" /><br></br>
+                    <input type="text" name="agios" id="agios" /><br></br>-->
+
+
+
                     <label for="dateOuv">Date d'ouverture du compte</label>
                     <input id="dateOuv" type="date" name="dateOuv" /><br />
                 </fieldset>
                 <div>
-                    <input type="submit" name="valider" value="valider" />
+                    <input type="submit" name="ajouter" value="valider" />
                     <button type="reset" class="bouttonA">ANNULER</button>
                 </div>
             </form>

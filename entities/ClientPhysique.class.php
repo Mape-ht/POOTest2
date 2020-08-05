@@ -1,7 +1,5 @@
 <?php
-
 class ClientPhysique{
-
     private $id;
     private $nom;
     private $prenom;
@@ -15,14 +13,11 @@ class ClientPhysique{
     private $password;
     private $typeclt;
     private $cltmoral;
-
     function __construct()
     {
         
     }
-
     
-
     /**
      * Get the value of id
      */ 
@@ -30,7 +25,6 @@ class ClientPhysique{
     {
         return $this->id;
     }
-
     /**
      * Set the value of id
      *
@@ -39,15 +33,14 @@ class ClientPhysique{
     public function setId($id)
     {
         $this->id = $id;
-
         
     }
-
     /**
      * Get the value of nomsClt
      */ 
     public function getNomsClt()
     {
+        return $this->nomsClt;
         return $this->nom;
     }
 
@@ -58,16 +51,17 @@ class ClientPhysique{
      */ 
     public function setNomsClt($nomsClt)
     {
+        $this->nomsClt = $nomsClt;
         $this->nom = $nomsClt;
 
-        
-    }
 
+    }
     /**
      * Get the value of prenoms
      */ 
     public function getPrenoms()
     {
+        return $this->prenoms;
         return $this->prenom;
     }
 
@@ -78,11 +72,11 @@ class ClientPhysique{
      */ 
     public function setPrenoms($prenoms)
     {
+        $this->prenoms = $prenoms;
         $this->prenom = $prenoms;
 
-        
-    }
 
+    }
     /**
      * Get the value of adresse
      */ 
@@ -90,7 +84,6 @@ class ClientPhysique{
     {
         return $this->adresse;
     }
-
     /**
      * Set the value of adresse
      *
@@ -99,10 +92,8 @@ class ClientPhysique{
     public function setAdresse($adresse)
     {
         $this->adresse = $adresse;
-
         
     }
-
     /**
      * Get the value of email
      */ 
@@ -110,7 +101,6 @@ class ClientPhysique{
     {
         return $this->email;
     }
-
     /**
      * Set the value of email
      *
@@ -119,15 +109,14 @@ class ClientPhysique{
     public function setEmail($email)
     {
         $this->email = $email;
-
         
     }
-
     /**
      * Get the value of phone
      */ 
     public function getPhone()
     {
+        return $this->phone;
         return $this->telephone;
     }
 
@@ -138,11 +127,11 @@ class ClientPhysique{
      */ 
     public function setPhone($phone)
     {
+        $this->phone = $phone;
         $this->telephone = $phone;
 
-        
-    }
 
+    }
     /**
      * Get the value of salaire
      */ 
@@ -150,7 +139,6 @@ class ClientPhysique{
     {
         return $this->salaire;
     }
-
     /**
      * Set the value of salaire
      *
@@ -159,10 +147,8 @@ class ClientPhysique{
     public function setSalaire($salaire)
     {
         $this->salaire = $salaire;
-
         
     }
-
     /**
      * Get the value of employeur
      */ 
@@ -170,7 +156,6 @@ class ClientPhysique{
     {
         return $this->statut;
     }
-
     /**
      * Set the value of employeur
      *
@@ -180,7 +165,27 @@ class ClientPhysique{
     {
         $this->statut = $statut;
 
-        
+
+    }
+
+    /**
+     * Get the value of numIdTravail
+     */ 
+    public function getNumIdTravail()
+    {
+        return $this->numIdTravail;
+    }
+
+    /**
+     * Set the value of numIdTravail
+     *
+     * 
+     */ 
+    public function setNumIdTravail($numIdTravail)
+    {
+        $this->numIdTravail = $numIdTravail;
+
+
     }
 
     /**
@@ -190,7 +195,6 @@ class ClientPhysique{
     {
         return $this->login;
     }
-
     /**
      * Set the value of login
      *
@@ -199,10 +203,8 @@ class ClientPhysique{
     public function setLogin($login)
     {
         $this->login = $login;
-
         
     }
-
     /**
      * Get the value of password
      */ 
@@ -210,7 +212,6 @@ class ClientPhysique{
     {
         return $this->password;
     }
-
     /**
      * Set the value of password
      *
@@ -219,10 +220,8 @@ class ClientPhysique{
     public function setPassword($password)
     {
         $this->password = $password;
-
         
     }
-
     /**
      * Get the value of typeclt
      */ 
@@ -230,7 +229,6 @@ class ClientPhysique{
     {
         return $this->typeclt;
     }
-
     /**
      * Set the value of typeclt
      *
@@ -239,10 +237,8 @@ class ClientPhysique{
     public function setTypeclt($typeclt)
     {
         $this->typeclt = $typeclt;
-
         
     }
-
     /**
      * Get the value of cltmoral
      */ 
@@ -250,7 +246,6 @@ class ClientPhysique{
     {
         return $this->cltmoral;
     }
-
     /**
      * Set the value of cltmoral
      *
@@ -260,7 +255,7 @@ class ClientPhysique{
     {
         $this->cltmoral = $cltmoral;
 
-        
+
     }
 
     /**

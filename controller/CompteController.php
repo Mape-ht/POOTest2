@@ -1,58 +1,144 @@
 <?php
 
-include '../model/DBacces.class.php';
-include "../model/CompteRepository.php";//appeller le fichier modeltraitement de sql
-//include "../model/ClientMoralRepository.php";//appeller le fichier modeltraitement de sql
+require_once "../model/CompteRepository.php"; //appeller le fichier modeltraitement de sql
 
+//extract($_POST);
 class CompteController
 {
 
 
-    public function addCompte(){
+    public function addCompteEpargne(){
 
-
-        $compteDB = new CompteRepository();
-
-
-        if(isset($_POST)&& empty($_POST)==false){//voir si $ post existe et si champs pas vide
+        if(isset($_POST)&& empty($_POST)==false && ($_POST["typeCompte"])!="0" && ($_POST["typesfrais"])=="1"){//voir si $ post existe et si champs pas vide
             //var_dump($_POST);
             //die; 
              $compte=new Compte();//instancier l'objet clientM (qui est un nouvel objet) de Type ClientMoral (qui est une classe)
              
-             $compte->setNumerocte($_POST["numCompte"]);
-             $compte->setClerib($_POST["cle"]);
-             $compte->setDepotinitial($_POST["initial"]);
-             $compte->setTypefrais_id($_POST["typesfrais"]);
-             $compte->setDatecrea($_POST["dateOuv"]);
-
-             //$compte->setNumCompte($_POST["numCompte"]);//récupérer les $_post du view
+         
+             $compte->setNumerocte($_POST["numCompte"]);//récupérer les $_post du view
              //attention le SetNom est le nom dans sql et $_post[] est le name dans le formulaire
          
-             
-             //$compte->setClerib($_POST["cle"]);
-             //$compte->setRemun($_POST["remun"]);
-             //$compte->setDepotInit($_POST["initial"]);
-             //$compte->setAgio($_POST["agios"]);
-             //$compte->setDateOuv($_POST["dateOuv"]);
-             //["typeCompte"] : null);
-             //$compte->setFraisOuverture($_POST["typesfrais"]);
-                  //var_dump($compte);
-                  //die;   
-             
-             $ok = $compteDB->addCompte($compte); //si l'attribution de valeur à l'objet se passe bien alors ppeler la foction d'insertion dans la base de données 
-         //var_dump($ok);
-         //die;
+             $compte->setClerib($_POST["cle"]);
+             $compte->setDepotinitial($_POST["initial"]);
+             $compte->setDatecrea($_POST["dateOuv"]);
+             $compte->setTypecompte_id($_POST["typeCompte"]);
+             $compte->setTypefrais_id($_POST["typesfrais"]);
+                     
+             $compteRep = new CompteRepository();
+             $ok = $compteRep->addCompte($compte); //si l'attribution de valeur à l'objet se passe bien alors ppeler la foction d'insertion dans la base de données 
+             var_dump($ok);
+             die;
              if ($ok){
          
                  
-                    // header('location:../view/compte/compte.php');//si insertion ok retour à la page d'accueil
-                    echo ("=====Compte bien créé !=====");
+                     header('location:../view/compte/compte.php');//si insertion ok retour à la page d'accueil
+                        
+             }
+           
+         }
+         else
+             {
+                 echo "Erreur !..."; //sinon message erreur
+             }
 
-                } else {
-                    echo "Erreur !..."; //sinon message erreur
-                }
 
-        } 
+    }
+
+    public function addCompteCourant(){
+
+        if(isset($_POST)&& empty($_POST)==false && ($_POST["typeCompte"])!="0" && ($_POST["typesfrais"])=="2"){//voir si $ post existe et si champs pas vide
+            //var_dump($_POST);
+            //die; 
+             $compte=new Compte();//instancier l'objet clientM (qui est un nouvel objet) de Type ClientMoral (qui est une classe)
+             
+         
+             $compte->setNumerocte($_POST["numCompte"]);//récupérer les $_post du view
+             //attention le SetNom est le nom dans sql et $_post[] est le name dans le formulaire
+         
+             $compte->setClerib($_POST["cle"]);
+             $compte->setDepotinitial($_POST["initial"]);
+             $compte->setDatecrea($_POST["dateOuv"]);
+             $compte->setTypecompte_id($_POST["typeCompte"]);
+             $compte->setTypefrais_id($_POST["typesfrais"]);
+                     
+             $compteRep = new CompteRepository();
+             $ok = $compteRep->addCompte($compte); //si l'attribution de valeur à l'objet se passe bien alors ppeler la foction d'insertion dans la base de données 
+             //var_dump($ok);
+             //die;
+             if ($ok){
+         
+                 
+                     header('location:../view/compte/compte.php');//si insertion ok retour à la page d'accueil
+                        
+             }
+           
+         }
+         else
+             {
+                 echo "Erreur !..."; //sinon message erreur
+             }
+
+
+    }
+
+    public function addCompteBloque(){
+
+        if(isset($_POST)&& empty($_POST)==false && ($_POST["typeCompte"])!="0" && ($_POST["typesfrais"])=="3"){//voir si $ post existe et si champs pas vide
+            //var_dump($_POST);
+            //die; 
+             $compte=new Compte();//instancier l'objet clientM (qui est un nouvel objet) de Type ClientMoral (qui est une classe)
+             
+         
+             $compte->setNumerocte($_POST["numCompte"]);//récupérer les $_post du view
+             //attention le SetNom est le nom dans sql et $_post[] est le name dans le formulaire
+         
+             $compte->setClerib($_POST["cle"]);
+             $compte->setDepotinitial($_POST["initial"]);
+             $compte->setDatecrea($_POST["dateOuv"]);
+             $compte->setTypecompte_id($_POST["typeCompte"]);
+             $compte->setTypefrais_id($_POST["typesfrais"]);
+                     
+             $compteRep = new CompteRepository();
+             $ok = $compteRep->addCompte($compte); //si l'attribution de valeur à l'objet se passe bien alors ppeler la foction d'insertion dans la base de données 
+             //var_dump($ok);
+             //die;
+             if ($ok){
+         
+                 
+                     header('location:../view/compte/compte.php');//si insertion ok retour à la page d'accueil
+                        
+             }
+           
+         }
+         else
+             {
+                 echo "Erreur !..."; //sinon message erreur
+             }
+
+
+    }
+  
+}
+
+if(isset($_POST['ajouter'])){
+    if ($_POST['typeCompte'] == "1"){
+
+
+        $compteController = new CompteController();
+        $compteController->addCompteEpargne();
+
+    }if ($_POST['typeCompte'] == "2") {
+        
+        $compteController = new CompteController();
+        $compteController->addCompteCourant();
+
+    }else{
+
+
+        $compteController = new CompteController();
+        $compteController->addCompteBloque();
     }
 }
+
+
 ?>

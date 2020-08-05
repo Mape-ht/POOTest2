@@ -22,7 +22,7 @@
             <ul class="main-nav">
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="view/client/client.php">Creation Client</a></li>
-                <li><a href="view/compte/compte.php">Creation Compte</a></li>
+                <li><a href="view/compte/compte.php">Creation Comptes</a></li>
                 <li><a href="#">Transaction</a></li>
             </ul>
         </aside>
