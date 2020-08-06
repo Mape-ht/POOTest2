@@ -81,19 +81,8 @@
                             <!--nom employeur listed from sql table client moral-->
                             <select name="employeur" id="Employeur" onchange="showEmployeur()">
                                 <option value="0">-----Employeur----</option>
-                                <?php
-
-                                include "../../model/ClientMoralRepository.php";
-                                $listClientMo = listClientMoral();
-                                if ($listClientMo != null) {
-
-                                    while ($clientmoral = $listClientMo->fetch(PDO::FETCH_ASSOC)) {
-                                        $id = $clientmoral["id"];
-                                        echo "<option value='$id'>" . $clientmoral["raison_social"] . "</option>";
-                                        echo "<option value='$id'>" . $clientmoral["raison_social"] . "</option>";
-                                    }
-                                }
-                                ?>
+                                <option value="1">Aty Afrika</option>
+                                <option value="2">Mballos</option>
                                 <option value="3">Autres</option>
                             </select><br></br>
                             <label for="numIdTravail">CIN</label>
